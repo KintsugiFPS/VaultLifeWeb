@@ -142,7 +142,7 @@ export default function DashboardPage() {
                       }
                       size="sm"
                     >
-                      {budget.percentageUsed}%
+                      {budget.percentageUsed.toFixed(2)}%
                     </Badge>
                   </div>
                   <ProgressBar
