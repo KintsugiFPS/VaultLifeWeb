@@ -10,9 +10,9 @@ const config: Config = {
     extend: {
       colors: {
         dark: {
-          bg: "#0A0B1E",
-          card: "#1A1B2E",
-          border: "#2D2E47",
+          bg: "#000000",
+          card: "#0A0A0A",
+          border: "#1F1F1F",
         },
         accent: {
           purple: "#6C5CE7",
@@ -42,8 +42,8 @@ const config: Config = {
         xl: "16px",
       },
       backgroundColor: {
-        "glass-dark": "rgba(26, 27, 46, 0.5)",
-        "glass-lighter": "rgba(45, 46, 71, 0.3)",
+        "glass-dark": "rgba(10, 10, 10, 0.7)",
+        "glass-lighter": "rgba(31, 31, 31, 0.4)",
       },
       backdropBlur: {
         sm: "4px",

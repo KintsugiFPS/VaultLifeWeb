@@ -1,11 +1,11 @@
 // Design tokens and theme configuration
 export const theme = {
   colors: {
-    background: "#0A0B1E",
-    surface: "#1A1B2E",
-    surfaceLight: "rgba(26, 27, 46, 0.5)",
-    border: "#2D2E47",
-    borderLight: "rgba(45, 46, 71, 0.3)",
+    background: "#000000",
+    surface: "#0A0A0A",
+    surfaceLight: "rgba(10, 10, 10, 0.7)",
+    border: "#1F1F1F",
+    borderLight: "rgba(31, 31, 31, 0.6)",
     text: {
       primary: "#FFFFFF",
       secondary: "#B0B1C3",
