@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, use } from "react";
-import { useRouter } from "next/navigation";
+import { useTransitionRouter } from "@/components/PageTransition";
 import { Navbar } from "@/components/Navbar";
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -11,7 +11,7 @@ import { useVaultLife } from "@/context/VaultLifeContext";
 import type { Goal } from "@/types";
 
 export default function GoalDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const router = useRouter();
+  const router = useTransitionRouter();
   const { id } = use(params);
   const { financial, isLoading, updateGoal } = useVaultLife();
   const [isEditing, setIsEditing] = useState(false);

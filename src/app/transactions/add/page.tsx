@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useTransitionRouter } from "@/components/PageTransition";
 import { Navbar } from "@/components/Navbar";
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -21,7 +21,7 @@ const categories: TransactionCategory[] = [
 ];
 
 export default function AddTransactionPage() {
-  const router = useRouter();
+  const router = useTransitionRouter();
   const { addTransaction } = useVaultLife();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -58,7 +58,7 @@ export default function AddTransactionPage() {
       };
 
       addTransaction(newTransaction);
-      router.push("/transactions");
+      router.navigate("/transactions");
     } catch (error) {
       console.error("Error adding transaction:", error);
       setIsSubmitting(false);

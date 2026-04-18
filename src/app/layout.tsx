@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/globals.css";
 import { VaultLifeProvider } from "@/context/VaultLifeContext";
+import { PageTransitionProvider } from "@/components/PageTransition";
 
 export const metadata: Metadata = {
   title: "VaultLife - Smart Personal Finance",
@@ -20,7 +21,7 @@ export default function RootLayout({
       <body className="bg-dark-bg text-white">
         <VaultLifeProvider>
           <div className="min-h-screen">
-            {children}
+            <PageTransitionProvider>{children}</PageTransitionProvider>
           </div>
         </VaultLifeProvider>
       </body>

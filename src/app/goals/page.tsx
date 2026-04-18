@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useTransitionRouter } from "@/components/PageTransition";
 import { Navbar } from "@/components/Navbar";
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -9,7 +9,7 @@ import { Badge } from "@/components/Badge";
 import { useVaultLife } from "@/context/VaultLifeContext";
 
 export default function GoalsPage() {
-  const router = useRouter();
+  const router = useTransitionRouter();
   const { financial, isLoading } = useVaultLife();
 
   if (isLoading || !financial) {
@@ -128,7 +128,7 @@ export default function GoalsPage() {
                 </div>
 
                 <button
-                  onClick={() => router.push(`/goals/${goal.id}`)}
+                  onClick={() => router.navigate(`/goals/${goal.id}`)}
                   className="mt-4 w-full py-2 rounded-lg bg-accent-purple/20 hover:bg-accent-purple/30 text-accent-light transition-smooth font-medium text-sm"
                 >
                   View Details

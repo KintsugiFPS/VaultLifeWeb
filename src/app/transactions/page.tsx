@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useTransitionRouter } from "@/components/PageTransition";
 import { Navbar } from "@/components/Navbar";
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -11,7 +11,7 @@ import { useVaultLife } from "@/context/VaultLifeContext";
 import type { TransactionCategory } from "@/types";
 
 export default function TransactionsPage() {
-  const router = useRouter();
+  const router = useTransitionRouter();
   const { financial, isLoading } = useVaultLife();
   const [selectedCategory, setSelectedCategory] =
     useState<TransactionCategory | null>(null);
@@ -180,7 +180,7 @@ export default function TransactionsPage() {
               Keep track of your spending by logging transactions
             </p>
             <button
-              onClick={() => router.push("/transactions/add")}
+              onClick={() => router.navigate("/transactions/add")}
               className="px-6 py-2 bg-accent-purple hover:bg-accent-light text-white rounded-lg font-medium transition-smooth"
             >
               + Add Transaction
